@@ -21,6 +21,6 @@ for index, word1 in enumerate(all_words):
         diff, index = different_in_one_letter_only(word1, word2)
         if diff:
             print 'Found correct words {} and {}, diff at index {}'.format(word1, word2, index)
-            common_letters = word1[:8]+word1[9:]
+            common_letters = word1[:index]+word1[index+1:]
             print 'Common letters are {}'.format(common_letters)
 
