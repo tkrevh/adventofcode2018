@@ -11,10 +11,10 @@ def read_single_column_ints_csv(filename):
     return rows
 
 
-def read_single_column_csv(filename):
+def read_single_column_csv(filename, delimiter=","):
     rows = []
     with open(filename) as csv_file:
-        csv_reader = csv.reader(csv_file)
+        csv_reader = csv.reader(csv_file, delimiter=delimiter)
         for row in csv_reader:
             rows.append(row[0])
 
