@@ -19,3 +19,9 @@ def read_single_column_csv(filename, delimiter=","):
             rows.append(row[0])
 
     return rows
+
+
+def read_lines(filename):
+    with open(filename) as f:
+        content = f.readlines()
+    return content
